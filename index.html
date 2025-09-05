@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Asa Hassan</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ======= Header ======= -->
+  <header>
+    <nav>
+      <h1>Asma Hassan</h1>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#Hobbies">Hobbies</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ======= Accueil ======= -->
+  <section id="accueil" class="section accueil">
+    <div class="intro">
+         <img src="illustration dev.jpg" alt="Illustration développeur">
+    <h2>Je suis <span>Asma Hassan</span>, développeuse en devenir, passionnée par le web et le design !</h2>
+    <div class="grid grid-3">
+      <a href="#projets" class="btn">Voir mes projets</a>
+    </div>
+    </div>
+  </section>
+
+  <!-- ======= À propos ======= -->
+  <section id="apropos" class="section">
+    <h2>À propos</h2>
+  <div class="grid grid-3">
+    <div class="card">
+    <div class="content">
+      <p>Je m'appelle <strong>Asma Hassan</strong>, passionnée par la création de sites web modernes et interactifs. 
+      Je suis actuellement étudiante en <strong>développement web</strong> et je cherche à améliorer mes compétences en JavaScript, HTML et CSS.</p>
+      <a href="cv.pdf" class="btn">Télécharger mon CV</a>
+      <img src="asma.jpg" alt="Ma photo" class="photo">
+  </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ======= Projets ======= -->
+  <section id="projets" class="section">
+    <h2>Mes Projets</h2>
+    <div class="cards">
+      <div class="card">
+        <p>Un mini-jeu interactif en JavaScript qui utilise des événements DOM.</p>
+        <span>#html #css #js</span><br>
+        <a href="#" class="btn">Voir</a>
+      </div>
+      <div class="card">
+        <p>Un site vitrine responsive pour une petite entreprise.</p>
+        <span>#html #css</span><br>
+        <a href="#" class="btn">Voir</a>
+      </div>
+      <div class="card">
+        <p>Une application To-Do List avec stockage local.</p>
+        <span>#html #css #js</span><br>
+        <a href="#" class="btn">Voir</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Compétences ======= -->
+  <section id="competences" class="section">
+    <h2>Mes Compétences</h2>
+    <div class="skills">
+      <div>
+        <h3>Soft Skills</h3>
+   <div class="grid grid-3">
+    <div class="card">
+        <ul>
+          <li>Gestion de projet</li>
+          <li>Résolution de problème</li>
+          <li>Travail en équipe</li>
+          <li>Autonomie</li>
+        </ul>
+  </div>
+   </div>
+      </div>
+      <div>
+        <h3>Hard Skills</h3>
+   <div class="grid grid-3">
+    <div class="card">
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Git & GitHub</li>
+        </ul>
+   </div>
+    </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- ======= Hobbies ======= -->
+ <section id="Hobbies" class="section Hobbies">
+  <div class="container">
+    <h2>Hobbies</h2>
+    <div class="grid grid-3">
+    <div class="card">
+      <h3>Lecture</h3>
+      <p>Essais et romans pour s'évader et apprendre.</p>
+    </div>
+   <div class="grid grid-3">
+    <div class="card">
+      <h3>Photo</h3>
+      <p>Capturer des instants et jouer avec la lumière.</p>
+    </div>
+    <div class="card">
+      <h3>Mer & Nature</h3>
+      <p>Se relaxer au bord de la mer et observer le monde.</p>
+    </div>
+  </div>
+ </section>
+
+  <!-- ======= Contact ======= -->
+  <section id="contact" class="section contact">
+    <h2>Vous avez un projet en tête ?</h2>
+    <p>N’hésitez pas à me contacter</p>
+    <form id="contactForm">
+      <input type="text" id="prenom" placeholder="Votre prénom" required>
+      <input type="text" id="nom" placeholder="Votre nom" required>
+      <input type="email" id="email" placeholder="Votre email" required>
+      <textarea id="message" placeholder="Votre message" required></textarea>
+      <button type="submit" class="btn">Envoyer</button>
+    </form>
+  </section>
+
+  <!-- ======= Footer ======= -->
+  <footer>
+    <p>&copy; 2025 - Votre Nom. Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>

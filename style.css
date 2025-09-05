@@ -1,0 +1,242 @@
+/* === RESET DE BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* === NAVBAR === */
+header {
+  background: #222;
+  color: #fff;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00d1b2;
+}
+
+/* === SECTIONS === */
+.section {
+  padding: 6rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.section h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #00d1b2;
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 4px;
+}
+
+/* === ACCUEIL === */
+.accueil {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.accueil .intro {
+  max-width: 600px;
+}
+
+.accueil h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.accueil h2 span {
+  color: #00d1b2;
+}
+
+.accueil img {
+  max-width: 400px;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+/* === BOUTONS === */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background: #00d1b2;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background 0.3s;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background: #00a890;
+}
+
+/* === À PROPOS === */
+#apropos .content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+#apropos .content p {
+  flex: 2;
+}
+
+#apropos .content .photo {
+  width: 200px;
+  border-radius: 50%;
+  border: 4px solid #00d1b2;
+}
+
+/* === PROJETS === */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card span {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #00d1b2;
+}
+
+/* === COMPÉTENCES === */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Barres de progression */
+.skill {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.skill p {
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.progress {
+  background: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 20px;
+}
+
+.progress-bar {
+  background: #00d1b2;
+  height: 100%;
+  text-align: right;
+  padding-right: 8px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 20px;
+  width: 0;
+  animation: grow 2s forwards;
+}
+
+/* Animation des barres */
+@keyframes grow {
+  from { width: 0; }
+}
+
+/* === CONTACT === */
+.contact p {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form input, form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+form button {
+  cursor: pointer;
+}
+
+/* === FOOTER === */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
