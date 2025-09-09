@@ -3,146 +3,337 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Asa Hassan</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <title>Portfolio – Asma Hassan</title>
+  <style>
+    /* ------------------- RESET ------------------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ------------------- HEADER ------------------- */
+    header {
+      background: #111;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+    }
+
+    header h1 {
+      font-size: 22px;
+      color: #00c4b4;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00c4b4;
+    }
+
+    /* ------------------- HERO ------------------- */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: #fff;
+    }
+
+    .hero h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    .hero h2 span {
+      color: #00c4b4;
+    }
+
+    .btn {
+      background: #00c4b4;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #009b8d;
+    }
+
+    /* ------------------- A PROPOS ------------------- */
+    .about {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 10%;
+      gap: 40px;
+      background: #f1f1f1;
+    }
+
+    .about img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    /* ------------------- PROJETS ------------------- */
+    .projects {
+      padding: 60px 10%;
+      text-align: center;
+    }
+
+    .projects h2 {
+      margin-bottom: 40px;
+    }
+
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    /* ------------------- COMPETENCES ------------------- */
+    .skills {
+      padding: 60px 10%;
+      background: #fff;
+    }
+
+    .skills h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .skills-box {
+      display: flex;
+      gap: 50px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .skill-group {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .skill {
+      margin-bottom: 15px;
+    }
+
+    .skill span {
+      font-weight: bold;
+      display: block;
+    }
+
+    .bar {
+      background: #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 8px;
+    }
+
+    .bar-fill {
+      background: #00c4b4;
+      height: 8px;
+      width: 0;
+      transition: width 1s ease-in-out;
+    }
+
+    /* ------------------- CONTACT ------------------- */
+    .contact {
+      padding: 60px 10%;
+      background: #111;
+      color: #fff;
+      text-align: center;
+    }
+
+    .contact h2 span {
+      color: #00c4b4;
+    }
+
+    form {
+      margin-top: 30px;
+      display: grid;
+      gap: 15px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 120px;
+    }
+
+    button {
+      background: #00c4b4;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #009b8d;
+    }
+
+    /* ------------------- FOOTER ------------------- */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ======= Header ======= -->
+  <!-- HEADER -->
   <header>
+    <h1>ASMA HASSAN</h1>
     <nav>
-      <h1>Asma Hassan</h1>
       <ul>
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#apropos">À propos</a></li>
-        <li><a href="#projets">Projets</a></li>
-        <li><a href="#competences">Compétences</a></li>
-        <li><a href="#Hobbies">Hobbies</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#skills">Compétences</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- ======= Accueil ======= -->
-  <section id="accueil" class="section accueil">
-    <div class="intro">
-         <img src="illustration dev.jpg" alt="Illustration développeur">
-    <h2>Je suis <span>Asma Hassan</span>, développeuse en devenir, passionnée par le web et le design !</h2>
-    <div class="grid grid-3">
-      <a href="#projets" class="btn">Voir mes projets</a>
-    </div>
-    </div>
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Je suis <span>Asma</span>, développeuse en devenir passionnée par le web et le design !</h2>
+    <a href="#projects" class="btn">Voir mes projets</a>
   </section>
 
-  <!-- ======= À propos ======= -->
-  <section id="apropos" class="section">
-    <h2>À propos</h2>
-  <div class="grid grid-3">
-    <div class="card">
-    <div class="content">
-      <p>Je m'appelle <strong>Asma Hassan</strong>, passionnée par la création de sites web modernes et interactifs. 
-      Je suis actuellement étudiante en <strong>développement web</strong> et je cherche à améliorer mes compétences en JavaScript, HTML et CSS.</p>
-      <a href="cv.pdf" class="btn">Télécharger mon CV</a>
-      <img src="asma.jpg" alt="Ma photo" class="photo">
-  </div>
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div>
+      <h2>À propos</h2>
+      <p>Je m'appelle Asma, passionnée par la création de sites web modernes et interactifs.  
+      Étudiante en développement web, je cherche à améliorer mes compétences en JavaScript, HTML et CSS.  
+      J'adore transformer mes idées en projets concrets et expérimenter avec les nouvelles technologies.</p>
+      <a href="#" class="btn">Télécharger mon CV</a>
     </div>
-    </div>
+    <img src="https://via.placeholder.com/150" alt="Asma">
   </section>
 
-  <!-- ======= Projets ======= -->
-  <section id="projets" class="section">
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
     <h2>Mes Projets</h2>
-    <div class="cards">
+    <div class="project-list">
       <div class="card">
-        <p>Un mini-jeu interactif en JavaScript qui utilise des événements DOM.</p>
-        <span>#html #css #js</span><br>
+        <h3>Mini-jeu interactif</h3>
+        <p>Projet en JavaScript utilisant les événements DOM.</p>
         <a href="#" class="btn">Voir</a>
       </div>
       <div class="card">
-        <p>Un site vitrine responsive pour une petite entreprise.</p>
-        <span>#html #css</span><br>
+        <h3>Site Portfolio</h3>
+        <p>Un site web responsive réalisé en HTML & CSS.</p>
         <a href="#" class="btn">Voir</a>
       </div>
       <div class="card">
-        <p>Une application To-Do List avec stockage local.</p>
-        <span>#html #css #js</span><br>
+        <h3>Application To-Do</h3>
+        <p>Application de gestion de tâches en JS.</p>
         <a href="#" class="btn">Voir</a>
       </div>
     </div>
   </section>
 
-  <!-- ======= Compétences ======= -->
-  <section id="competences" class="section">
+  <!-- SKILLS -->
+  <section id="skills" class="skills">
     <h2>Mes Compétences</h2>
-    <div class="skills">
-      <div>
+    <div class="skills-box">
+      <div class="skill-group">
         <h3>Soft Skills</h3>
-   <div class="grid grid-3">
-    <div class="card">
-        <ul>
-          <li>Gestion de projet</li>
-          <li>Résolution de problème</li>
-          <li>Travail en équipe</li>
-          <li>Autonomie</li>
-        </ul>
-  </div>
-   </div>
+        <div class="skill"><span>Gestion de projet</span><div class="bar"><div class="bar-fill" data-level="80%"></div></div></div>
+        <div class="skill"><span>Résolution de problème</span><div class="bar"><div class="bar-fill" data-level="70%"></div></div></div>
+        <div class="skill"><span>Adaptabilité</span><div class="bar"><div class="bar-fill" data-level="90%"></div></div></div>
       </div>
-      <div>
+
+      <div class="skill-group">
         <h3>Hard Skills</h3>
-   <div class="grid grid-3">
-    <div class="card">
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>Git & GitHub</li>
-        </ul>
-   </div>
-    </div>
+        <div class="skill"><span>HTML</span><div class="bar"><div class="bar-fill" data-level="95%"></div></div></div>
+        <div class="skill"><span>CSS</span><div class="bar"><div class="bar-fill" data-level="85%"></div></div></div>
+        <div class="skill"><span>JavaScript</span><div class="bar"><div class="bar-fill" data-level="75%"></div></div></div>
+        <div class="skill"><span>VS Code</span><div class="bar"><div class="bar-fill" data-level="90%"></div></div></div>
       </div>
     </div>
   </section>
 
- <!-- ======= Hobbies ======= -->
- <section id="Hobbies" class="section Hobbies">
-  <div class="container">
-    <h2>Hobbies</h2>
-    <div class="grid grid-3">
-    <div class="card">
-      <h3>Lecture</h3>
-      <p>Essais et romans pour s'évader et apprendre.</p>
-    </div>
-   <div class="grid grid-3">
-    <div class="card">
-      <h3>Photo</h3>
-      <p>Capturer des instants et jouer avec la lumière.</p>
-    </div>
-    <div class="card">
-      <h3>Mer & Nature</h3>
-      <p>Se relaxer au bord de la mer et observer le monde.</p>
-    </div>
-  </div>
- </section>
-
-  <!-- ======= Contact ======= -->
-  <section id="contact" class="section contact">
-    <h2>Vous avez un projet en tête ?</h2>
-    <p>N’hésitez pas à me contacter</p>
-    <form id="contactForm">
-      <input type="text" id="prenom" placeholder="Votre prénom" required>
-      <input type="text" id="nom" placeholder="Votre nom" required>
-      <input type="email" id="email" placeholder="Votre email" required>
-      <textarea id="message" placeholder="Votre message" required></textarea>
-      <button type="submit" class="btn">Envoyer</button>
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Vous avez un <span>projet en tête</span> ?<br>N’hésitez pas à me <span>contacter</span></h2>
+    <form>
+      <input type="text" placeholder="Votre prénom" required>
+      <input type="text" placeholder="Votre nom" required>
+      <input type="email" placeholder="Votre email" required>
+      <textarea placeholder="Votre message..." required></textarea>
+      <button type="submit">Envoyer</button>
     </form>
   </section>
 
-  <!-- ======= Footer ======= -->
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 - Asma Hassan. Tous droits réservés.</p>
+    <p>© 2025 - Portfolio d'Asma Hassan | Tous droits réservés</p>
   </footer>
 
+  <!-- SCRIPT ANIMATION COMPETENCES -->
+  <script>
+    window.addEventListener("scroll", () => {
+      document.querySelectorAll(".bar-fill").forEach(bar => {
+        const rect = bar.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          bar.style.width = bar.getAttribute("data-level");
+        }
+      });
+    });
+  </script>
 </body>
 </html>
